@@ -12,9 +12,9 @@
 <h1 align='center'> Conteúdo </h1>
 
 <p align="center">
- <a href="#objetivo">Objetivo</a> • Ser visto e reconhecido na rede
- <a href="#tecnologias">Tecnologias</a> • HTML e CSS
- <a href="#contribuicao">Contribuição</a> • Para todos que estão migrando de área
+ <a href="#objetivo">Objetivo</a> • Ser visto e reconhecido na rede <br>
+ <a href="#tecnologias">Tecnologias</a> • HTML e CSS <br>
+ <a href="#contribuicao">Contribuição</a> • Para todos que estão migrando de área <br>
  <a href="#autor">Autor</a> • Thiago Doria Rego
 </p>
 
