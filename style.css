@@ -2,7 +2,7 @@
     --primary-color: #000;
     --second-color: #fff;
     --third-color: #CC5577;
-    --gap: 4rem;
+    --gap: 2rem;
 }
 
 * {
@@ -297,7 +297,7 @@ p {
     position: absolute;
     font-size: 4rem;
     font-style: italic;
-    left: -3.0rem;
+    left: -2rem;
     top: -2rem;
 }
 
@@ -451,12 +451,14 @@ p {
     }
 
     .intro-content, .grid-content, .hobbies-img{
-        grid-template-columns: 2fr;
+        grid-template-columns: 1fr;
     }
     .hobbies-img {
-        grid-template-columns: repeat(2, 2fr);
-        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        width: 52rem;
         transition: none;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hobbies-img img:hover {
