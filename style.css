@@ -291,16 +291,6 @@ p {
     justify-content: center;
 }
 
-.ability-text h3::before {
-    counter-increment: grid-counter;
-    content: counter(grid-counter);
-    position: absolute;
-    font-size: 4rem;
-    font-style: italic;
-    left: -2rem;
-    top: -2rem;
-}
-
 .hobbies-img {
     margin: auto auto;
     display: grid;
