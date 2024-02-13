@@ -1,21 +1,11 @@
-const form = document.getElementById('#form');
-const nameInput = document.getElementById('#first-name');
-const lastNameInput = document.getElementById('#last-name');
-const emailInput = document.getElementById('#email');
-const messageTextArea = document.getElementById('#message');
+const form = document.querySelector('#form');
+const nameInput = document.querySelector('#first-name');
+const lastNameInput = document.querySelector('#last-name');
+const emailInput = document.querySelector('#email');
+const messageTextArea = document.querySelector('#message');
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
-
-    checkInputs();
-});
-
-function checkInputs() {
-
-    const nameInput = nameInput.value;
-    const lastNameInput = lastNameInput.value;
-    const emailInput = emailInput.value;
-    const messageTextArea = messageTextArea.value;
 
     if (nameInput.value === "") {
         alert("Ih... Acho que esqueceu seu nome");
@@ -38,11 +28,11 @@ function checkInputs() {
     }
 
     form.submit();
-};
+});
 
 function isEmailValid(email) {
     const emailRegex = new RegExp(
-        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
     );
 
     if (emailRegex.test(email)) {
