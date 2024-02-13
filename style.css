@@ -296,13 +296,12 @@ p {
     display: grid;
     gap: 5rem;
     grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
 }
 
 .hobbies-img img {
-    max-width: 15rem;
-    max-height: 15rem;
-    width: auto;
-    height: auto;
+    width: 20rem;
+    height: 20rem;
     transition: all 300ms ease-in-out;
 }
 
