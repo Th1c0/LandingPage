@@ -73,14 +73,14 @@ p {
     content: '';
     position: absolute;
     bottom: 0.9rem;
-    left: 50%;
+    left: 100%;
     width: 0;
     height: 0.3rem;
     transition: all 0.3s ease-in-out;
 }
 
 .menu ul li a:hover::after {
-    width: 65%;
+    width: 60%;
     left: 20%;
 }
 
@@ -151,7 +151,9 @@ p {
 
 .time-line {
     position: relative;
-    margin: 4rem 4rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 4rem;
 }
 
 .container {
@@ -292,7 +294,6 @@ p {
 }
 
 .hobbies-img {
-    margin: auto auto;
     display: grid;
     gap: 5rem;
     grid-template-columns: repeat(3, 1fr);
