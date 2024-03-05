@@ -1,43 +1,29 @@
-const form = document.querySelector('#form');
-const nameInput = document.querySelector('#first-name');
-const lastNameInput = document.querySelector('#last-name');
-const emailInput = document.querySelector('#email');
-const messageTextArea = document.querySelector('#message');
+function typeWrite(elemento){
+    const textoArray = elemento.innerHTML.split('');
+    elemento.innerHTML = ' ';
+    textoArray.forEach(function(letra, i){   
+      
+    setTimeout(function(){
+        elemento.innerHTML += letra;
+    }, 40 * i)
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
+  })
+};
 
-    if (nameInput.value === "") {
-        alert("Ih... Acho que esqueceu seu nome");
-        return;
-    }
+const item = document.querySelectorAll('[data-anime]');
 
-    if (lastNameInput.value === "") {
-        alert("Ih... Acho que esqueceu seu sobrenome");
-        return;
-    }
+const animeScroll = ( ) => {
+    const windowTop = window.scrollY + innerHeight * 0.7;
 
-    if (emailInput.value === "" || !isEmailValid(emailInput.value)) {
-        alert("Ih... Acho que esqueceu seu e-mail");
-        return;
-    }
+    item.forEach(element => {
+        if(windowTop > element.offsetTop) {
+            element.classList.add('animate')
+        } else {
+            element.classList.remove('animate')
+        }
+    })
+};
 
-    if (messageTextArea.value === "") {
-        alert("Faltou escrever uma mensagem");
-        return;
-    }
-
-    form.submit();
-});
-
-function isEmailValid(email) {
-    const emailRegex = new RegExp(
-        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-    );
-
-    if (emailRegex.test(email)) {
-        return true;
-    }
-
-    return false;
-}
+window.addEventListener('scroll', () => {
+    animeScroll();
+})

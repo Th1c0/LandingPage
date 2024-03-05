@@ -110,6 +110,54 @@ p {
     margin-bottom: 2rem;
 }
 
+.resumo {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    overflow: hidden; 
+}
+
+.resumo::after{
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca 3s infinite;
+   }
+   
+   @keyframes pisca{
+       0%, 100%{
+           opacity: 1;
+       }
+       50%{
+           opacity: 0;
+       }
+   }
+
+.curriculo {
+    margin-top: 4rem ;
+    display: flex;
+    gap: var(--gap);
+    align-items: center;
+}
+
+.curriculo a {
+    color: #fff;
+    border: 0.3rem solid rgb(171, 126, 200); ;
+    padding: 1rem;
+    width: 20rem;
+    border-radius: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.curriculo a:hover {
+    content: '';
+    background-color: rgb(171, 126, 200);
+    font-weight: bold;
+    transition: all 0.5s;
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+}
+
 .description {
     font-size: 1.5rem;
     padding-bottom: 2rem;
@@ -147,6 +195,29 @@ p {
 .intro-img {
     max-width: 100%;
     height: auto;
+}
+
+[data-anime] {
+    opacity: 0;
+    transition: 1s;
+}
+
+[data-anime='down'] {
+    transform: translate3d(0, -100px, 0);
+}
+[data-anime='up'] {
+    transform: translate3d(0, 100px, 0);
+}
+[data-anime='left'] {
+    transform: translate3d(-100px, 0, 0);
+}
+[data-anime='right'] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
 
 .time-line {
@@ -373,70 +444,6 @@ p {
     margin-top: -9.5rem;
     color: white;
     text-align: center;
-}
-
-.contact-section h1 {
-    margin-bottom: 6rem;
-}
-
-.contact-form {
-    display: grid;
-    grid-column: span 2;
-}
-
-.contact-form .form {
-    border: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--gap);
-}
-
-.form-group {
-    flex: 1 1 320px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 1rem;
-}
-
-.form-group input,
-.form-group textarea {
-    border: none;
-    background: var(--second-color);
-    padding: 1rem;
-    width: 100%;
-    font-size: 2rem;
-}
-
-.form-message {
-    width: 100%;
-    flex: 1 1 100%;
-}
-
-.form-group button {
-    border: 0.5rem solid var(--second-color);
-    background: none;
-    color: var(--second-color);
-    padding: 1rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 300ms ease-in-out;
-}
-
-.form-group button:hover {
-    background: var(--second-color);
-    color: var(--primary-color);
-}
-
-.form-group ::placeholder {
-    color: rgb(196, 194, 194);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    box-shadow: 0 0 0.5rem 0.5rem var(--third-color);
 }
 
 @media screen and (max-width: 1000px) {
