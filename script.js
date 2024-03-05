@@ -6,7 +6,6 @@ function typeWrite(elemento){
     setTimeout(function(){
         elemento.innerHTML += letra;
     }, 40 * i)
-
   })
 };
 
