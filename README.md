@@ -9,6 +9,8 @@
     💻 A programação me tornou livre para criar, me desafiar e expandir meus horizontes 👾
 </p>
 
+<img src="/assets/Tela-readme.png" alt="Tela-readme">
+
 <h1 align='center'> Conteúdo </h1>
 
 <p align="center">
