@@ -45,6 +45,11 @@ p {
     font-size: 1.3rem;
 }
 
+section {
+    overflow: hidden;
+    display: block;
+}
+
 .menu {
     background: #691e6a;
     position: fixed;
@@ -134,7 +139,7 @@ p {
    }
 
 .curriculo {
-    margin-top: 4rem ;
+    margin-top: 2rem ;
     display: flex;
     gap: var(--gap);
     align-items: center;
@@ -545,4 +550,3 @@ p {
         content: 'x';
     }
 }
-
