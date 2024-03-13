@@ -147,20 +147,20 @@ section {
 
 .curriculo a {
     color: #fff;
-    border: 0.3rem solid rgb(171, 126, 200); ;
     padding: 1rem;
-    width: 20rem;
-    border-radius: 1rem;
-    text-align: center;
+    border-radius: 50%;
     cursor: pointer;
+    background-color: #531757;
 }
 
 .curriculo a:hover {
     content: '';
-    background-color: rgb(171, 126, 200);
-    font-weight: bold;
+    background-color: rgb(195, 173, 209);
     transition: all 0.5s;
-    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+}
+
+.curriculo img {
+    width: 3rem;
 }
 
 .description {
